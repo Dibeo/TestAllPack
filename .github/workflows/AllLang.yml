@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["java", "javascript", "python", "csharp", "actions"]  # adapte selon tes langages
+        language: ["java-kotlin", "javascript", "python", "csharp", "actions"]  # adapte selon tes langages
 
     steps:
       - name: Checkout repository
