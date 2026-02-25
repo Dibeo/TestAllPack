@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["java-kotlin", "javascript", "python", "csharp", "actions"]  # adapte selon tes langages
+        language: ["java", "javascript", "python", "csharp", "actions"]  # adapte selon tes langages
 
     steps:
       - name: Checkout repository
@@ -33,4 +33,4 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4
         with:
-          category: "/language:${{ matrix.language }}"
+          category: "${{ matrix.language }} - Save the polar bear."
